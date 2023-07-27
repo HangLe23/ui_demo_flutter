@@ -11,7 +11,24 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [Image.asset('assets/images/TheLastJedi.png')]),
+      appBar: AppBar(
+        title: const Text('Detail'),
+      ),
+      body: Stack(children: [
+        SizedBox(
+          height: 345.67,
+          child: Image.asset(
+            'assets/images/banner_detail.png',
+          ),
+        ),
+        IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.white,
+          ),
+          onPressed: () {},
+        ),
+      ]),
     );
   }
 }

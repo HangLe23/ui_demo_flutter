@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'screen/detail_screen.dart';
-import 'screen/home_screen.dart';
-import 'screen/info_screen.dart';
-import 'screen/play_screen.dart';
+import 'package:ui_demo_flutter/screen/home_screen.dart';
+import 'package:ui_demo_flutter/screen/info_screen.dart';
+import 'package:ui_demo_flutter/screen/play_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,33 +25,29 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: DetailScreen(),
-      // Scaffold(
-      //   backgroundColor: const Color(0x0015141f),
-      //   body: _buildCurrentScreen(),
-      //   bottomNavigationBar: BottomNavigationBar(
-      //     //backgroundColor: const Color(0x0015141f),
-      //     currentIndex: _currentIndex,
-      //     onTap: _onItemTapped,
-      //     items: const [
-      //       BottomNavigationBarItem(
-      //         icon: Icon(
-      //           Icons.home,
-      //         ),
-      //         label: 'Home',
-      //       ),
-      //       BottomNavigationBarItem(
-      //         icon: Icon(Icons.play_arrow),
-      //         label: 'Play',
-      //       ),
-      //       BottomNavigationBarItem(
-      //         icon: Icon(Icons.person),
-      //         label: 'Info',
-      //       ),
-      //     ],
-      //   ),
-      // ),
+    return MaterialApp(
+      home: Scaffold(
+        //backgroundColor: const Color(0x0015141f),
+        body: _buildCurrentScreen(),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          onTap: _onItemTapped,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.play_arrow),
+              label: 'Play',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Info',
+            ),
+          ],
+        ),
+      ),
       debugShowCheckedModeBanner: false,
     );
   }

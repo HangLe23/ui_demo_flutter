@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_demo_flutter/items/top_rate_item.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -8,12 +9,21 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreen extends State<HomeScreen> {
-  final List<String> entries = <String>['A', 'B', 'C'];
-  //final List<int> colorCodes = <int>[600, 500, 100];
   @override
   Widget build(BuildContext context) {
+    List<TopRateItem> listImages = [
+      const TopRateItem(
+        imageUrl: 'assets/images/TheLastJedi.png',
+        name: 'Star Wars: The Last Jedi',
+      ),
+      const TopRateItem(
+        imageUrl: 'assets/images/movie1.png',
+        name: 'Soul',
+      ),
+    ];
+
     return Scaffold(
-        backgroundColor: const Color(0x0015141f),
+        //backgroundColor: const Color(0x0015141f),
         appBar: AppBar(
           title: const Text(
             'Hello Guest, ',
@@ -36,7 +46,7 @@ class _HomeScreen extends State<HomeScreen> {
                 ),
                 Positioned(
                   bottom: 12,
-                  left: 43,
+                  left: 12,
                   child: Card(
                     color: Colors.white30,
                     shape: RoundedRectangleBorder(
@@ -70,15 +80,9 @@ class _HomeScreen extends State<HomeScreen> {
             Expanded(
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.all(8),
-                itemCount: entries.length,
+                itemCount: listImages.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return const SizedBox(
-                    height: 404,
-                    width: 160,
-                    //color: Colors.amber[colorCodes[index]],
-                    //child: Center(child: Text('Entry ${entries[index]}')),
-                  );
+                  return SizedBox(height: 230, child: listImages[index]);
                 },
                 separatorBuilder: (BuildContext context, int index) =>
                     const SizedBox(
