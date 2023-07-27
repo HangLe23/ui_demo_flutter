@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ui_demo_flutter/screen/discover_screen.dart';
 import 'package:ui_demo_flutter/screen/home_screen.dart';
-import 'package:ui_demo_flutter/screen/info_screen.dart';
-import 'package:ui_demo_flutter/screen/play_screen.dart';
+import 'package:ui_demo_flutter/screen/user_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +30,7 @@ class _MyAppState extends State<MyApp> {
         //backgroundColor: const Color(0x0015141f),
         body: _buildCurrentScreen(),
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: const Color(0xFF15141f),
           currentIndex: _currentIndex,
           onTap: _onItemTapped,
           items: const [
@@ -57,9 +58,9 @@ class _MyAppState extends State<MyApp> {
       case 0:
         return const HomeScreen();
       case 1:
-        return PlayScreen();
+        return const DiscoverScreen();
       case 2:
-        return InfoScreen();
+        return const UserScreen();
       default:
         return const HomeScreen(); // Màn hình mặc định
     }

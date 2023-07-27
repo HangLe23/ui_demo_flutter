@@ -23,7 +23,7 @@ class _HomeScreen extends State<HomeScreen> {
     ];
 
     return Scaffold(
-        //backgroundColor: const Color(0x0015141f),
+        backgroundColor: const Color(0xFF15141f),
         appBar: AppBar(
           title: const Text(
             'Hello Guest, ',
