@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_demo_flutter/items/top_rate_item.dart';
+import 'package:ui_demo_flutter/untils/TextStyles/TextStyles.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -25,9 +26,9 @@ class _HomeScreen extends State<HomeScreen> {
     return Scaffold(
         backgroundColor: const Color(0xFF15141f),
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             'Hello Guest, ',
-            style: TextStyle(color: Colors.white, fontSize: 28.91),
+            style: TextStyles.tittle,
           ),
           backgroundColor: Colors.transparent, // Xóa màu nền của AppBar
           elevation: 0, // Xóa đổ bóng của AppBar
