@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_demo_flutter/screen/discover_screen.dart';
 import 'package:ui_demo_flutter/screen/home_screen.dart';
 import 'package:ui_demo_flutter/screen/user_screen.dart';
+import 'package:ui_demo_flutter/untils/Colors/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _currentIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +26,10 @@ class _MyAppState extends State<MyApp> {
         body: _buildCurrentScreen(),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: const Color(0xFF15141f),
-          currentIndex: _currentIndex,
-          onTap: _onItemTapped,
+          currentIndex: currentIndex,
+          onTap: (index) => onchange(index),
+          selectedItemColor: CustomColors.selected,
+          unselectedItemColor: CustomColors.unselected,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
@@ -54,7 +51,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Widget _buildCurrentScreen() {
-    switch (_currentIndex) {
+    switch (currentIndex) {
       case 0:
         return const HomeScreen();
       case 1:
@@ -64,5 +61,11 @@ class _MyAppState extends State<MyApp> {
       default:
         return const HomeScreen(); // Màn hình mặc định
     }
+  }
+
+  onchange(int index) {
+    setState(() {
+      currentIndex = index;
+    });
   }
 }

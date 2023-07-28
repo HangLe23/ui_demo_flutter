@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_demo_flutter/items/top_rate_item.dart';
+import 'package:ui_demo_flutter/untils/Colors/colors.dart';
 import 'package:ui_demo_flutter/untils/TextStyles/TextStyles.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -53,20 +54,17 @@ class _HomeScreen extends State<HomeScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24),
                     ),
-                    child: const SizedBox(
+                    child: SizedBox(
                       width: 254,
                       height: 74,
                       child: Row(
                         children: [
                           Icon(
                             Icons.play_arrow,
-                            color: Colors.white,
+                            color: CustomColors.selected,
                           ),
-                          Text(
-                            'Offical trailer',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 19.27),
-                          ),
+                          Text('Offical trailer',
+                              style: TextStyles.lato400Size19),
                         ],
                       ),
                     ),
@@ -74,10 +72,12 @@ class _HomeScreen extends State<HomeScreen> {
                 ),
               ],
             ),
-            const Text(
-              'Top rated',
-              style: TextStyle(color: Colors.white, fontSize: 28.91),
-            ),
+            Row(children: [
+              Text(
+                'Top rated',
+                style: TextStyles.tittle,
+              ),
+            ]),
             Expanded(
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_demo_flutter/untils/TextStyles/TextStyles.dart';
 
 import '../screen/detail_screen.dart';
 
@@ -38,13 +39,9 @@ class TopRateItem extends StatelessWidget {
                   width: 272,
                   height: 91,
                   child: Center(
-                    child: Text(
-                      name,
-                      style: const TextStyle(
-                        fontSize: 19.27,
-                        color: Colors.white,
-                      ),
-                    ), // Display the actual name here
+                    child: Text(name,
+                        style: TextStyles
+                            .lato400Size19), // Display the actual name here
                   ),
                 ),
               ),
@@ -62,18 +59,33 @@ class TopRateItem extends StatelessWidget {
                   height: 55,
                   child: Column(
                     children: [
-                      const Text(
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
                         'IMDb',
-                        style: TextStyle(fontSize: 9.64, color: Colors.white),
+                        style: TextStyles.IMDb,
+                      ),
+                      const SizedBox(
+                        height: 5,
                       ),
                       Row(
                         children: [
+                          const SizedBox(
+                            width: 15,
+                          ),
                           Image.asset(
                             'assets/images/Star.png',
                             width: 18,
                             height: 18, // Provide the correct image path here
                           ),
-                          const Text('7.0')
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            '7.0',
+                            style: TextStyles.lato400Size19,
+                          )
                         ],
                       ),
                     ],
