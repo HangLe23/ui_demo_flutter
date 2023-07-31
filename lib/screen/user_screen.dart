@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ui_demo_flutter/untils/Colors/colors.dart';
 import 'package:ui_demo_flutter/untils/TextStyles/TextStyles.dart';
 
+import '../authentication/login.dart';
+
 class UserScreen extends StatelessWidget {
   const UserScreen({super.key});
 
@@ -19,7 +21,13 @@ class UserScreen extends StatelessWidget {
             style: TextStyles.tittle,
           ),
           const Spacer(),
-          const Text('logout', style: TextStyle(color: Colors.red))
+          TextButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Login(),
+                ));
+              },
+              child: Text('logout', style: TextStyles.lato500Size24))
         ]),
         backgroundColor: Colors.transparent,
         elevation: 0,
