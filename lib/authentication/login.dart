@@ -267,7 +267,7 @@ class _LoginState extends State<Login> {
                   width: 50,
                 ),
                 Text(
-                  'You have do not account?',
+                  'You do not have account?',
                   style: TextStyles.lato400Size20,
                 ),
                 const Spacer(),
