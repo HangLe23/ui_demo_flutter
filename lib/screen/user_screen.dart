@@ -21,118 +21,141 @@ class UserScreen extends StatelessWidget {
           const Spacer(),
           const Text('logout', style: TextStyle(color: Colors.red))
         ]),
-        backgroundColor: Colors.transparent, // Xóa màu nền của AppBar
+        backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Column(children: [
-        Card(
-          margin: const EdgeInsets.only(left: 15),
-          color: Colors.white30,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(280),
-          ),
-          child: const SizedBox(
-            width: 280,
-            height: 280,
-          ),
-        ),
-        const SizedBox(
-          height: 5,
-        ),
-        const Center(
-          child: Text(
-            'Edit photo',
-            style: TextStyle(color: Colors.blue, fontSize: 19),
-          ),
-        ),
-        Row(
+      body: SingleChildScrollView(
+        child: Column(
           children: [
+            Card(
+              margin: const EdgeInsets.only(left: 15),
+              color: Colors.white30,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(280),
+              ),
+              child: const SizedBox(
+                width: 280,
+                height: 280,
+              ),
+            ),
             const SizedBox(
-              width: 20,
+              height: 5,
             ),
-            Text(
-              'Name',
-              style: TextStyles.lato400Size24,
+            const Center(
+              child: Text(
+                'Edit photo',
+                style: TextStyle(color: Colors.blue, fontSize: 19),
+              ),
             ),
-          ],
-        ),
-        Row(
-          children: [
             const SizedBox(
-              width: 20,
+              height: 30,
             ),
-            Expanded(
-                child: TextField(
-              enabled: false,
-              autofocus: false,
-              maxLines: null,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white30,
-                enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(
-                      24,
+            Row(
+              children: [
+                const SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  'Name',
+                  style: TextStyles.lato400Size24,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              width: 350,
+              height: 50,
+              child: TextField(
+                enabled: true,
+                autofocus: false,
+                maxLines: null,
+                decoration: const InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white30,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        24,
+                      ),
                     ),
                   ),
                 ),
-                prefixText: 'Le Thanh Hang',
-                prefixStyle: TextStyles.lato400Size24,
+                onChanged: (value) {},
+                onSubmitted: (String submitValue) {},
               ),
-              onChanged: (value) {},
-              onSubmitted: (String submitValue) {},
-            )),
-            const SizedBox(
-              width: 20,
-            )
-          ],
-        ),
-        Row(
-          children: [
-            const SizedBox(
-              width: 20,
             ),
-            Text(
-              'Email',
-              style: TextStyles.lato400Size24,
-            ),
-          ],
-        ),
-        Row(
-          children: [
             const SizedBox(
-              width: 20,
+              height: 20,
             ),
-            Expanded(
-                child: TextField(
-              enabled: false,
-              autofocus: false,
-              maxLines: null,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white30,
-                enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(
-                      24,
+            Row(
+              children: [
+                const SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  'Email',
+                  style: TextStyles.lato400Size24,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              width: 350,
+              height: 50,
+              child: TextField(
+                enabled: true,
+                autofocus: false,
+                maxLines: null,
+                decoration: const InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white30,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        24,
+                      ),
                     ),
                   ),
+                  // focusedBorder: OutlineInputBorder(
+                  //   borderSide: BorderSide(color: Colors.white),
+                  //   borderRadius: BorderRadius.all(
+                  //     Radius.circular(
+                  //       24,
+                  //     ),
+                  //   ),
+                  // ),
                 ),
-                prefixText: 'hangmilo2002@gmail.com',
-                prefixStyle: TextStyles.lato400Size24,
+                onChanged: (value) {},
+                onSubmitted: (String submitValue) {},
               ),
-              onChanged: (value) {},
-              onSubmitted: (String submitValue) {},
-            )),
+            ),
             const SizedBox(
-              width: 20,
+              height: 20,
+            ),
+            SizedBox(
+              width: 350,
+              height: 55,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: CustomColors.button,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24))),
+                child: Text(
+                  'Save',
+                  style: TextStyles.lato400Size24,
+                ),
+              ),
             )
           ],
         ),
-        ElevatedButton(onPressed: () {}, child: const Text('Save'))
-      ]),
+      ),
     );
   }
 }

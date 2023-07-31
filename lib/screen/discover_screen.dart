@@ -49,44 +49,37 @@ class DiscoverScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Row(
-            children: [
-              const SizedBox(
-                width: 20,
-              ),
-              Expanded(
-                  child: TextField(
-                enabled: true,
-                autocorrect: false,
-                decoration: InputDecoration(
-                  hintText: 'Search ',
-                  hintStyle: TextStyles.hintSearch,
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Icon(
-                      Icons.search,
-                      color: CustomColors.hintSearch,
-                      size: 14,
-                    ),
+          SizedBox(
+            width: 350,
+            height: 50,
+            child: TextField(
+              enabled: true,
+              autocorrect: false,
+              decoration: InputDecoration(
+                hintText: 'Search ',
+                hintStyle: TextStyles.hint,
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.search,
+                    color: CustomColors.hint,
+                    size: 14,
                   ),
-                  filled: true,
-                  fillColor: Colors.white30,
-                  border: const OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(
-                        24,
-                      ),
+                ),
+                filled: true,
+                fillColor: Colors.white30,
+                border: const OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      24,
                     ),
                   ),
                 ),
-                onChanged: (value) {},
-                onSubmitted: (String submitValue) {},
-              )),
-              const SizedBox(
-                width: 20,
-              )
-            ],
+              ),
+              onChanged: (value) {},
+              onSubmitted: (String submitValue) {},
+            ),
           ),
           const SizedBox(
             height: 20,

@@ -275,7 +275,6 @@ class _DetailScreenState extends State<DetailScreen> {
                 itemCount: listImages.length,
                 itemBuilder: (BuildContext context, int index) {
                   return SizedBox(
-                    height: 5,
                     width: 100,
                     child: listImages[index],
                   );

@@ -71,12 +71,12 @@ class _CastDrewScreenState extends State<CastDrewScreen> {
                   autocorrect: false,
                   decoration: InputDecoration(
                     hintText: 'Search ',
-                    hintStyle: TextStyles.hintSearch,
+                    hintStyle: TextStyles.hint,
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Icon(
                         Icons.search,
-                        color: CustomColors.hintSearch,
+                        color: CustomColors.hint,
                         size: 15,
                       ),
                     ),
