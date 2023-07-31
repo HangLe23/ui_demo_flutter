@@ -35,6 +35,7 @@ class UserScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            //photo
             Card(
               margin: const EdgeInsets.only(left: 15),
               color: Colors.white30,
@@ -46,43 +47,46 @@ class UserScreen extends StatelessWidget {
                 height: 280,
               ),
             ),
-            const SizedBox(
-              height: 5,
+
+            //edit photo
+            Center(
+              child: TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Edit photo',
+                  style: TextStyle(color: Colors.blue, fontSize: 19),
+                ),
+              ),
             ),
-            const Center(
+            SizedBox(
+              width: 300,
               child: Text(
-                'Edit photo',
-                style: TextStyle(color: Colors.blue, fontSize: 19),
+                'Name',
+                style: TextStyles.lato400Size24,
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                Text(
-                  'Name',
-                  style: TextStyles.lato400Size24,
-                ),
-              ],
             ),
             const SizedBox(
               height: 10,
             ),
+            //textfield name
             SizedBox(
               width: 350,
               height: 50,
               child: TextField(
                 enabled: true,
-                autofocus: false,
-                maxLines: null,
+                controller: TextEditingController(text: 'Le Thanh Hang'),
+                style: TextStyles.lato400Size20,
                 decoration: const InputDecoration(
                   filled: true,
-                  fillColor: Colors.white30,
                   enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        24,
+                      ),
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.all(
                       Radius.circular(
@@ -98,31 +102,29 @@ class UserScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                Text(
-                  'Email',
-                  style: TextStyles.lato400Size24,
-                ),
-              ],
+            SizedBox(
+              width: 300,
+              child: Text(
+                'Email',
+                style: TextStyles.lato400Size24,
+              ),
             ),
             const SizedBox(
               height: 10,
             ),
+            //textfield email
             SizedBox(
               width: 350,
               height: 50,
               child: TextField(
-                enabled: true,
-                autofocus: false,
-                maxLines: null,
+                enabled: false,
+                controller:
+                    TextEditingController(text: 'hangmilo2002@gmail.com'),
+                style: TextStyles.lato400Size20,
                 decoration: const InputDecoration(
                   filled: true,
                   fillColor: Colors.white30,
-                  enabledBorder: OutlineInputBorder(
+                  border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.all(
                       Radius.circular(
@@ -130,14 +132,6 @@ class UserScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: BorderSide(color: Colors.white),
-                  //   borderRadius: BorderRadius.all(
-                  //     Radius.circular(
-                  //       24,
-                  //     ),
-                  //   ),
-                  // ),
                 ),
                 onChanged: (value) {},
                 onSubmitted: (String submitValue) {},
@@ -146,9 +140,10 @@ class UserScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            //button save
             SizedBox(
               width: 350,
-              height: 55,
+              height: 50,
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(

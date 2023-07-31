@@ -52,30 +52,28 @@ class _LoginState extends State<Login> {
             const SizedBox(
               height: 5,
             ),
-            //textfeild email
+            //textfield email
             SizedBox(
               width: 350,
               height: 50,
-              child: TextField(
+              child: TextFormField(
                 enabled: true,
                 autofocus: false,
-                maxLines: null,
+                style: TextStyles.lato400Size20,
                 decoration: InputDecoration(
-                  hintText: 'Enter your Email',
-                  hintStyle: TextStyles.hint,
-                  filled: true,
-                  fillColor: Colors.white30,
-                  enabledBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(
-                        24,
+                    hintText: 'Enter your Email',
+                    hintStyle: TextStyles.hint,
+                    filled: true,
+                    fillColor: Colors.white30,
+                    border: const OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(
+                          24,
+                        ),
                       ),
-                    ),
-                  ),
-                ),
+                    )),
                 onChanged: (value) {},
-                onSubmitted: (String submitValue) {},
               ),
             ),
             const SizedBox(
@@ -91,21 +89,27 @@ class _LoginState extends State<Login> {
             const SizedBox(
               height: 5,
             ),
-            //textfeild password
+            //textfield password
             SizedBox(
               width: 350,
               height: 50,
               child: TextField(
                 enabled: true,
-                autofocus: false,
-                maxLines: null,
+                style: TextStyles.lato400Size20,
                 decoration: InputDecoration(
                   hintText: 'Enter your Password',
                   hintStyle: TextStyles.hint,
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.remove_red_eye,
+                      color: CustomColors.hint,
+                      size: 20,
+                    ),
+                  ),
                   filled: true,
                   fillColor: Colors.white30,
-                  enabledBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(
                         24,

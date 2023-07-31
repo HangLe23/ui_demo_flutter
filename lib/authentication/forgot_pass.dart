@@ -54,7 +54,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           const SizedBox(
             height: 5,
           ),
-          //textfeild email
+          //textfield email
           SizedBox(
             width: 350,
             height: 50,

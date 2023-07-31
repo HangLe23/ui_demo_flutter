@@ -54,7 +54,7 @@ class _RegisterState extends State<Register> {
             const SizedBox(
               height: 5,
             ),
-            //textfeild email
+            //textfield email
             SizedBox(
               width: 350,
               height: 50,
@@ -93,7 +93,7 @@ class _RegisterState extends State<Register> {
             const SizedBox(
               height: 5,
             ),
-            //textfeild password
+            //textfield password
             SizedBox(
               width: 350,
               height: 50,
@@ -104,6 +104,14 @@ class _RegisterState extends State<Register> {
                 decoration: InputDecoration(
                   hintText: 'Enter your Password',
                   hintStyle: TextStyles.hint,
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.remove_red_eye,
+                      color: CustomColors.hint,
+                      size: 20,
+                    ),
+                  ),
                   filled: true,
                   fillColor: Colors.white30,
                   enabledBorder: const OutlineInputBorder(
@@ -133,7 +141,7 @@ class _RegisterState extends State<Register> {
             const SizedBox(
               height: 5,
             ),
-            //textfeild password
+            //textfield password
             SizedBox(
               width: 350,
               height: 50,
@@ -144,6 +152,14 @@ class _RegisterState extends State<Register> {
                 decoration: InputDecoration(
                   hintText: 'Confirm Password',
                   hintStyle: TextStyles.hint,
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.remove_red_eye,
+                      color: CustomColors.hint,
+                      size: 20,
+                    ),
+                  ),
                   filled: true,
                   fillColor: Colors.white30,
                   enabledBorder: const OutlineInputBorder(
