@@ -29,7 +29,7 @@ class TopRateItem extends StatelessWidget {
             ),
             Positioned(
               bottom: 12,
-              left: 35,
+              left: 20,
               child: Card(
                 color: Colors.white30,
                 shape: RoundedRectangleBorder(

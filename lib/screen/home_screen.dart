@@ -19,8 +19,16 @@ class _HomeScreen extends State<HomeScreen> {
         name: 'Star Wars: The Last Jedi',
       ),
       const TopRateItem(
-        imageUrl: 'assets/images/movie1.png',
-        name: 'Soul',
+        imageUrl: 'assets/images/TheLastJedi.png',
+        name: 'Star Wars: The Last Jedi',
+      ),
+      const TopRateItem(
+        imageUrl: 'assets/images/TheLastJedi.png',
+        name: 'Star Wars: The Last Jedi',
+      ),
+      const TopRateItem(
+        imageUrl: 'assets/images/TheLastJedi.png',
+        name: 'Star Wars: The Last Jedi',
       ),
     ];
 
@@ -59,9 +67,16 @@ class _HomeScreen extends State<HomeScreen> {
                       height: 74,
                       child: Row(
                         children: [
+                          const SizedBox(
+                            width: 20,
+                          ),
                           Icon(
                             Icons.play_arrow,
                             color: CustomColors.selected,
+                            size: 19,
+                          ),
+                          const SizedBox(
+                            width: 5,
                           ),
                           Text('Offical trailer',
                               style: TextStyles.lato400Size19),
@@ -72,7 +87,13 @@ class _HomeScreen extends State<HomeScreen> {
                 ),
               ],
             ),
+            const SizedBox(
+              height: 20,
+            ),
             Row(children: [
+              const SizedBox(
+                width: 20,
+              ),
               Text(
                 'Top rated',
                 style: TextStyles.tittle,
@@ -80,6 +101,7 @@ class _HomeScreen extends State<HomeScreen> {
             ]),
             Expanded(
               child: ListView.separated(
+                padding: const EdgeInsets.all(20),
                 scrollDirection: Axis.horizontal,
                 itemCount: listImages.length,
                 itemBuilder: (BuildContext context, int index) {

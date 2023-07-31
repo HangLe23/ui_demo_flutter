@@ -7,4 +7,5 @@ class CustomColors {
   static Color hintSearch = const Color(0xFFBBBBBB);
   static Color selected = const Color(0xFFFF8F71);
   static Color unselected = const Color(0x0FFFFFFF);
+  static Color decription = const Color(0xFFbcbcbc);
 }

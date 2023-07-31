@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_demo_flutter/screen/detail_screen.dart';
+import 'package:ui_demo_flutter/untils/TextStyles/TextStyles.dart';
 
 class MovieItem extends StatelessWidget {
   final String imageUrl;
@@ -22,7 +23,10 @@ class MovieItem extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(imageUrl),
-            Text(name),
+            Text(
+              name,
+              style: TextStyles.lato400Size14,
+            ),
           ],
         ));
   }

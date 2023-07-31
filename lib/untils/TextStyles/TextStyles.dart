@@ -13,6 +13,26 @@ class TextStyles {
       fontWeight: FontWeight.w400,
       fontSize: 19.27,
       color: CustomColors.textColor);
+  static TextStyle lato400Size24 = TextStyle(
+      fontFamily: 'Lato',
+      fontWeight: FontWeight.w400,
+      fontSize: 24,
+      color: CustomColors.textColor);
+  static TextStyle lato400Size14 = TextStyle(
+      fontFamily: 'Lato',
+      fontWeight: FontWeight.w400,
+      fontSize: 14.45,
+      color: CustomColors.textColor);
+  static TextStyle lato500Size28 = TextStyle(
+      fontFamily: 'Lato',
+      fontWeight: FontWeight.w500,
+      fontSize: 28.91,
+      color: CustomColors.textColor);
+  static TextStyle lato500Size19 = TextStyle(
+      fontFamily: 'Lato',
+      fontWeight: FontWeight.w500,
+      fontSize: 19.27,
+      color: CustomColors.textColor);
   static TextStyle IMDb = TextStyle(
       fontFamily: 'Lato',
       fontWeight: FontWeight.w400,
@@ -28,4 +48,10 @@ class TextStyles {
       fontWeight: FontWeight.w400,
       fontSize: 19.27,
       color: CustomColors.selected);
+  static TextStyle decription = TextStyle(
+    fontFamily: 'Lato',
+    fontWeight: FontWeight.w400,
+    fontSize: 14.45,
+    color: CustomColors.decription,
+  );
 }
